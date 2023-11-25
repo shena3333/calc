@@ -5,17 +5,14 @@ body {
     height: 100vh;
     margin: 0;
     background-color: #e4e8eb;
-    /*  фона */
 }
 
 .calculator {
     border: 2px solid #020608;
-    /*  цвет для рамки */
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     background-color: #fff;
-    /* Белый цвет для области калькулятора */
 }
 
 #display {
@@ -26,61 +23,38 @@ body {
     border: none;
     border-radius: 5px;
     background-color: #ecf0f1;
-    /* цвет для дисплея */
 }
 
 .buttons {
     display: grid;
-    border: 1px solid #3498db;
-    /* Синий цвет для рамки кнопок */
+    border: 1px solid #c3f50d;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
     padding: 10px;
-   
-
 }
 
-button {
+.butStyle {
     padding: 15px;
-    font-size: 18px;
-    border: none;
-    border-radius: 5px;
+    font-size: 20px;
+    border: 0px;    
+    border-radius: 20px 20px 20px 20px; 
     background-color: #f0f0f0;
-    color: #ffffff;
-    /* Белый текст на кнопках */
+    color: #c3f50d;
     cursor: pointer;
+    font-weight:600;
+    background-color: #034b94;
 }
 
-.buttonNew {
+.butStyle1 {
     padding: 15px;
-    font-size: 18px;
+    font-size: 20px;
     border: none;
-    border-radius: 5px;
+    border-radius: 20px 20px 20px 20px;
     background-color: #f0f0f0;
-    color: #ffffff;
-    /* Белый текст на кнопках */
+    color: red;
     cursor: pointer;
+    box-shadow: 5px 3px 3px  rgb(102, 101, 101);
+    background-color: #0768c9;
 }
 
 
-button.memory {
-    background-color: #2196f3;
-    /* Синий цвет для кнопок памяти */
-    color: #fff;
-}
-
-* Активные кнопки будут иметь более светлый синий цвет */ button:active {
-    background-color: #2980b9;
-}
-
-/* Стили для кнопок, не добавляющих цифры на дисплей (операторы, MS, MR) */
-button:not([onclick^="appendToDisplay"]) {
-    background-color: #34495e;
-    /* Темно-синий цвет для этих кнопок */
-}
-
-/* Стили для кнопок, добавляющих цифры на дисплей (цифры, точка) */
-button[onclick^="appendToDisplay"] {
-    background-color: #3498db;
-    /* Синий цвет для этих кнопок */
-}
